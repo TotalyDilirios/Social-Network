@@ -13,19 +13,19 @@ profile detail
             <h1>{{object.user}}</h1>
             <div class="ui vertical fluid menu">
                 <div class="item">
-                    Posts
+                    Des postes
                     <div class="ui label">{{ object.get_posts_no }}</div>
                 </div>
                 <div class="item">
-                    Likes given
+                    Aime donné
                     <div class="ui label">{{ object.get_likes_given_no }}</div>
                 </div>
                 <div class="item">
-                    Likes received
+                    les likes reçus
                     <div class="ui label">{{ object.get_likes_recieved_no }}</div>
                 </div>
                 <div class="item">
-                    Friends
+                    Des amis
                     <div class="ui label">{{ object.get_friends_no }}</div>
                 </div>
             </div>
@@ -59,7 +59,7 @@ profile detail
                     </div>
                 {% endfor %}
             {% else %}
-                <h1>No posts of this user ...</h1>
+                <h1>Aucun message de cet utilisateur ...</h1>
             {% endif %}
         </div>
     </div>

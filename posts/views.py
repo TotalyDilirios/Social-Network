@@ -8,6 +8,8 @@ from django.contrib import messages
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.utils.translation import gettext as _
+
 # Create your views here.
 
 @login_required

@@ -6,10 +6,13 @@ class PostModelForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ('content', 'image')
+        labels = {
+            'content': 'Contenu',
+        }
 
 class CommentModelForm(forms.ModelForm):
     body = forms.CharField(label='', 
-                            widget=forms.TextInput(attrs={'placeholder': 'Add a comment...'}))
+                            widget=forms.TextInput(attrs={'placeholder': 'Ajouter un commentaire...'}))
     class Meta:
         model = Comment
         fields = ('body',)

@@ -1,9 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.utils.translation import gettext as _
 
 def home_view(request):
     user = request.user
-    hello = 'Hello world'
+    hello = _('Hello world')
 
     context = {
         'user': user,

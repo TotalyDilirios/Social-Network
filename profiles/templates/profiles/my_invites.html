@@ -7,7 +7,7 @@ my invites
 {% block content %}
 
     {% if is_empty %}
-        <h1>No invatations here..</h1>
+        <h1>Aucune invitation ici..</h1>
     {% endif %}
  
     {% for obj in qs %}
@@ -22,14 +22,14 @@ my invites
                         <p>{{obj.bio}}</h3>
                         <br>
                         <a href="">
-                            <button class="ui primary button w-big mb-5">See profile</button>
+                            <button class="ui primary button w-big mb-5">Voir le profil</button>
                         </a>
                         <form action="{% url 'profiles:accept-invite' %}" method="POST">
                             {% csrf_token %}
                             <input type="hidden" name="profile_pk" value={{obj.pk}}>
                             <button type="submit" class="ui positive basic button w-big mb-5">
                                 <i class="check icon"></i>
-                                Accept invite
+                                Accepter l'invitation
                             </button>
                         </form>
                          <form action="{% url 'profiles:reject-invite' %}" method="POST">
@@ -37,7 +37,7 @@ my invites
                             <input type="hidden" name="profile_pk" value={{obj.pk}}>
                             <button type="submit" class="ui negative basic button w-big mb-5">
                                 <i class="close icon"></i>
-                                Reject invite
+                                Refuser l'invitation
                             </button>
                         </form>
                     </div>
